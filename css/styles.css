@@ -40,7 +40,7 @@ background: var(--white-color);
     text-decoration: none;
     font-family: 'Roboto';
     font-style: normal;
-    font-weight: medium;
+    font-weight: 500;
     font-size: 14px;
     line-height: auto;
     letter-spacing: 0.02em;
@@ -60,7 +60,7 @@ background: var(--white-color);
     text-decoration: none;
     font-family: 'Roboto';
     font-style: normal;
-    font-weight: medium;
+    font-weight: 500;
     font-size: 14px;
     line-height: auto;
     letter-spacing: 0.02em;
@@ -250,4 +250,55 @@ background: var(--white-color);
 /*Filters*/
 .filters .title {
     color: var(--white-color);
+}
+
+.button-filter {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.625;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: var(--title-text-color);
+    background: #F5F4FA;
+    /*box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);*/
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button-filter:hover,
+.button-filter:focus {
+    color: var(--white-color);
+    background-color: var(--accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+                0px 1px 2px rgba(0, 0, 0, 0.08),
+                0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+}
+
+.portfolio .title {
+    color: var(--white-color);
+}
+
+.portfolio-title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    /*text-align: center;*/
+    color: var(--title-text-color);
+}
+
+.portfolio-text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.875;
+    letter-spacing: 0.03em;
+    /*text-align: center;*/
+    color: var(--main-text-color);
 }
