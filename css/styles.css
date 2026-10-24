@@ -1,54 +1,152 @@
+/**,
+*::before,
+*::after {
+    box-sizing: inherit;
+}*/
+
 :root {
 --main-text-color: #757575;
 --title-text-color: #212121;
 --accent-color: #2196F3;
---background-color: #F5F5F5;
---white-color: #FFFFFF;
+--active-accent-color: #188CE8;
+--secondary-background-color: #F5F5F5;
+--background-color: #FFFFFF;
+--third-background-color: #F5F4FA;
+--fourth-backkground-color: #2F303A;
+--first-border-color: #ECECEC;
+--second-border-color: #EEEEEE;
+--card-set-gap: 30px;
 }
+
+html {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul
+{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 body {
-    font-family: 'Roboto', 'Raleway' sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 14px;
-    background: var(--background-color);
+    letter-spacing: 0.03em;
+    background-color: var(--background-color);
     color: var(--title-text-color);
 }
 .list {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
+
 /* Header */
 .page-header {
-background: var(--white-color);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--first-border-color);
+    background: var(--background-color);
 }
+
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    /*outline: 1px solid red;*/
+}
+
+.section {
+    padding: 94px 0;
+}
+
+.navigation{
+
+}
+
 .logo {
+
+    margin-right: 93px;
+    /* width: 145px; */
+
+    color: var(--accent-color);
+    text-decoration: none;
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    /* identical to box height */
+}
+
+.text-logo {
+    color: var(--title-text-color);
+}
+
+/*.logo {
+    margin-right: 93px;
     width: 145px;
     height: 31px;
     left: 215px;
     top: 24px;
     text-decoration: none;
-    font-family: 'Raleway';
+    font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 26px;
-    line-height: auto;
+    line-height: 1.192;
     letter-spacing: 0.03em;
     color: var(--accent-color);
 }
+
 /*.text-logo {
     color: var(--title-text-color);
 }*/
 
+.site-nav {
+    display: flex;
+}
+
+.site-nav .site-nav-item:not(:last-child) {
+    margin-right: 50px;
+}
+
 .site-nav .link {
+    display: block;
+    padding: 15px 0;
     text-decoration: none;
-    font-family: 'Roboto';
-    font-style: normal;
+    /*font-family: 'Roboto';
+    font-style: normal;*/
     font-weight: 500;
     font-size: 14px;
-    line-height: auto;
+    line-height: 1.143;
     letter-spacing: 0.02em;
     color: var(--title-text-color);
-    width: 281px;
+    /*width: 281px;
     height: 16px;
     left: 453px;
-    top: 32px;
+    top: 32px;*/
 }
 
 .site-nav .link:hover,
@@ -56,13 +154,30 @@ background: var(--white-color);
     color: var(--accent-color);
 }
 
+.site-nav .link.current {
+    color: var(--accent-color);
+}
+
+.contacts-header {
+    display: flex;
+}
+
+.contacts-header .mail-tel-item + .mail-tel-item {
+    margin-left: 50px;
+}
+
+.mail-tel {
+    margin-left: auto;
+}
+
 .contacts-header .link {
+    padding: 10px 0;
     text-decoration: none;
-    font-family: 'Roboto';
-    font-style: normal;
+    /*font-family: 'Roboto';
+    font-style: normal;*/
     font-weight: 500;
     font-size: 14px;
-    line-height: auto;
+    line-height: 1.143;
     letter-spacing: 0.02em;
     color: var(--main-text-color);
 }
@@ -73,34 +188,43 @@ background: var(--white-color);
 }
 
 /* Main */
-.main {
+main {
     /*hero*/
 }
 
 .hero{
-    background-color: #2F303A;
+    height: 600px;
+    margin: 0 auto;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-color: var(--fourth-backkground-color);
+    text-align: center;
 }
 
 .hero .title {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-weight: 900;
     font-size: 44px;
     line-height: 1.364;
     letter-spacing: 0.06em;
     text-align: center;
     text-transform: uppercase;
-    color: var(--white-color);
+    color: var(--background-color);
 }
 
 .button{
-    font-family: 'Roboto';
-    font-style: normal;
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+    padding: 10px 32px;
+    min-width: 216px;
+    font-family: inherit;
     font-weight: bold;
     font-size: 16px;
     line-height: 1.875;
     letter-spacing: 0.06em;
-    color: var(--white-color);
+    color: var(--background-color);
     background: var(--accent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     /*box-shadow: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15))*/
@@ -110,9 +234,9 @@ background: var(--white-color);
 
 .button:hover,
 .button:focus {
-    background-color: #188CE8;
+    background-color: var(--active-accent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
+    /*border-radius: 4px;*/
 }
 
 /*Features*/
@@ -121,11 +245,11 @@ background: var(--white-color);
 }
 
 .features .title {
-    font-family: 'Roboto';
-    font-style: normal;
+    /*font-family: 'Roboto';
+    font-style: normal;*/
     font-weight: bold;
     font-size: 14px;
-    line-height: auto;
+    line-height: 1.143;
     letter-spacing: 0.03em;
     /*text-align: center;*/
     text-transform: uppercase;
@@ -133,9 +257,9 @@ background: var(--white-color);
 }
 
 .features .text {
-    font-family: 'Roboto';
+    /*font-family: 'Roboto';
     font-style: normal;
-    font-weight: normal;
+    font-weight: normal;*/
     font-size: 14px;
     line-height: 1.714;
     letter-spacing: 0.03em;
@@ -148,11 +272,11 @@ background: var(--white-color);
 }
 
 .work .title {
-    font-family: 'Roboto';
-    font-style: normal;
+    /*font-family: 'Roboto';
+    font-style: normal;*/
     font-weight: bold;
     font-size: 36px;
-    line-height: auto;
+    line-height: 1.167;
     letter-spacing: 0.03em;
     text-align: center;
     /*text-transform: uppercase;*/
@@ -171,11 +295,11 @@ background: var(--white-color);
 }
 
 .team .title {
-    font-family: 'Roboto';
-    font-style: normal;
+    /*font-family: 'Roboto';
+    font-style: normal;*/
     font-weight: bold;
     font-size: 36px;
-    line-height: auto;
+    line-height: 1.167;
     letter-spacing: 0.03em;
     text-align: center;
     color: var(--title-text-color);
@@ -184,22 +308,22 @@ background: var(--white-color);
 /*.card*/
 
 .name {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: medium;
+    /*font-family: 'Roboto';
+    font-style: normal;*/
+    font-weight: 500;
     font-size: 16px;
-    line-height: auto;
+    line-height: 1.188;
     letter-spacing: 0.03em;
     text-align: center;
     color: var(--title-text-color);
 }
 
 .position {
-    font-family: 'Roboto';
+    /*font-family: 'Roboto';
     font-style: normal;
-    font-weight: normal;
+    font-weight: normal;*/
     font-size: 16px;
-    line-height: auto;
+    line-height: 1.188;
     letter-spacing: 0.03em;
     text-align: center;
     color: var(--main-text-color);
@@ -217,7 +341,7 @@ background: var(--white-color);
     text-decoration: none;
     font-family: 'Roboto';
     font-style: normal;
-    font-weight: medium;
+    font-weight: 500;
     font-size: 14px;
     line-height: 1.714;
     letter-spacing: 0.03em;
@@ -253,8 +377,8 @@ background: var(--white-color);
 }
 
 .button-filter {
-    font-family: 'Roboto';
-    font-style: normal;
+    /*font-family: 'Roboto';
+    font-style: normal;*/
     font-weight: 500;
     font-size: 16px;
     line-height: 1.625;
@@ -265,6 +389,7 @@ background: var(--white-color);
     /*box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);*/
     border-radius: 4px;
     cursor: pointer;
+    /*border: none;*/
 }
 
 .button-filter:hover,
@@ -274,7 +399,7 @@ background: var(--white-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
                 0px 1px 2px rgba(0, 0, 0, 0.08),
                 0px 2px 2px rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
+    /*border-radius: 4px;*/
 }
 
 .portfolio .title {
@@ -282,8 +407,8 @@ background: var(--white-color);
 }
 
 .portfolio-title {
-    font-family: 'Roboto';
-    font-style: normal;
+    /*font-family: 'Roboto';
+    font-style: normal;*/
     font-weight: bold;
     font-size: 18px;
     line-height: 2;
@@ -293,8 +418,8 @@ background: var(--white-color);
 }
 
 .portfolio-text {
-    font-family: 'Roboto';
-    font-style: normal;
+    /*font-family: 'Roboto';
+    font-style: normal;*/
     font-weight: normal;
     font-size: 16px;
     line-height: 1.875;
