@@ -12,9 +12,11 @@
 --secondary-background-color: #F5F5F5;
 --background-color: #FFFFFF;
 --third-background-color: #F5F4FA;
---fourth-backkground-color: #2F303A;
+--fourth-background-color: #2F303A0.4;
+--overlay-background-color: #C4C4C4;
 --first-border-color: #ECECEC;
 --second-border-color: #EEEEEE;
+--svg-icon-color: #AFB1B8;
 --card-set-gap: 30px;
 }
 
@@ -54,7 +56,8 @@ body {
     padding: 0;
 }
 
-/* Header */
+                 /* Header */
+
 .page-header {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -167,10 +170,14 @@ body {
 }
 
 .mail-tel {
+    display: flex;
     margin-left: auto;
 }
 
 .contacts-header .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 10px 0;
     text-decoration: none;
     /*font-family: 'Roboto';
@@ -180,6 +187,13 @@ body {
     line-height: 1.143;
     letter-spacing: 0.02em;
     color: var(--main-text-color);
+}
+
+.contacts-header .mail-icon {
+    display:block;
+    text-decoration: none;
+    margin-right: 10px;
+    fill: currentColor;
 }
 
 .contacts-header .link:hover,
@@ -192,18 +206,39 @@ main {
     /*hero*/
 }
 
-.hero{
+                          /*HERO*/
+
+.overlay {
+    max-width: 1600px;
     height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image:
+            linear-gradient(to right,
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)),
+            url('../images/backgroundhero.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-color: var(--overlay-background-color);
+}
+
+.hero{
+    /*height: 600px;*/
     margin: 0 auto;
     padding-top: 200px;
     padding-bottom: 200px;
-    background-color: var(--fourth-backkground-color);
+    background-color: var(--fourth-background-color);
     text-align: center;
 }
 
 .hero .title {
+    width: 696px;
     margin-top: 0;
     margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.364;
@@ -239,7 +274,8 @@ main {
     /*border-radius: 4px;*/
 }
 
-/*Features*/
+                             /*Features*/
+
 .features {
     background-color: var(--background-color);
 }
@@ -269,9 +305,29 @@ main {
     margin-left: 30px;
 }
 
+.features-icons {
+    display: flex;
+}
+
+.features-icons .features-icon + .features-icon {
+    margin-left: 30px;
+
+}
+
+.features-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 270px;
+    height: 120px;
+    background-color: var(--third-background-color);
+    border-radius: 4px;
+}
+
 .features .title {
     /*font-family: 'Roboto';
     font-style: normal;*/
+    margin-top: 30px;
     font-weight: bold;
     font-size: 14px;
     line-height: 1.143;
